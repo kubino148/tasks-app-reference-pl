@@ -91,6 +91,8 @@ Dwóch ustawień nie ma w pliku. Ustaw je we własnym repo:
 - Settings > Pages > Source: GitHub Actions (repo musi być publiczne).
 - Settings > Environments > github-pages > Deployment branches and tags: dodaj regułę `refs/pull/*/merge`. Bez niej job `deploy` scalonego pull requesta zostanie odrzucony z komunikatem: Branch "refs/pull/N/merge" is not allowed to deploy to github-pages due to environment protection rules.
 
+Jeśli nie było cię na tym spotkaniu: zastąp `.github/workflows/ci.yml` plikiem z tego repo, usuń `.github/workflows/ci_livecode.yml`, jeśli go masz, i ustaw dwa ustawienia powyżej. Nic z tego nie jest pracą domową.
+
 Dokumentacja: [Using custom workflows with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages), [events that trigger workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows).
 
 Zadania:
@@ -102,6 +104,8 @@ Zadania:
 ### Spotkanie 4: obrazy i kontenery Dockera
 
 Dockerfile opisuje obraz: obraz bazowy plus kroki, które dodają twój serwis. Budujesz obraz, uruchamiasz go jako kontener i docierasz do niego przez port.
+
+Jeśli nie było cię na tym spotkaniu: skopiuj te cztery pliki z tego repo do swojego, każdy w całości: `services/tasks-api/Dockerfile`, `services/tasks-api/.dockerignore`, `services/title-normalizer/Dockerfile`, `services/title-normalizer/.dockerignore`. Nie ma ustawień do zmiany, a `ci.yml` się nie zmienia. Nic z tego nie jest pracą domową.
 
 Dokumentacja: [Dockerfile reference](https://docs.docker.com/reference/dockerfile/), [Building best practices](https://docs.docker.com/build/building/best-practices/), [Forwarding ports in your codespace](https://docs.github.com/en/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace).
 
